@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>A2Z Services | Professional Facility & Manpower Solutions</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A2Z Services delivers premium facility management, manpower outsourcing, and business support solutions in Bhopal. 24/7 support, 100% compliant, tech-driven.">
+    <meta name="keywords" content="facility management Bhopal, manpower services, housekeeping, security services, business support, A2Z Services">
+    <meta name="author" content="A2Z Services">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="A2Z Services - You Dream We Design">
+    <meta property="og:description" content="Integrated facility management & workforce solutions. Professional, reliable, and technology-driven services in Bhopal.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://yourdomain.github.io/a2z-services">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon (emoji-based fallback, lightweight) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23002255'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23FFB347' font-weight='bold' font-family='Arial'%3EA2Z%3C/text%3E%3C/svg%3E">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            background: #fefefe;
+            color: #1e2a3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* Inter font import */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+
+        /* Color Palette: Deep Navy + Warm Accent */
+        :root {
+            --primary: #002255;
+            --primary-dark: #001a44;
+            --accent: #FFB347;
+            --accent-hover: #ff9f1a;
+            --gray-light: #f8fafc;
+            --gray-border: #e2e8f0;
+            --text-dark: #0f172a;
+            --text-muted: #334155;
+            --white: #ffffff;
+            --shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
+            --shadow-md: 0 12px 28px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        /* Global reset & smooth */
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        /* Sticky Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0.9rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-svg {
+            width: 48px;
+            height: 48px;
+        }
+
+        .brand-text {
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--primary) 0%, #00337c 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Buttons & CTA */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.8rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,34,85,0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .btn-accent:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Container & Sections */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 4px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-subhead {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 1rem auto 2.5rem;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(120deg, #f0f4ff 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-badge {
+            background: rgba(255,179,71,0.15);
+            color: var(--primary);
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 1rem 0 1.2rem;
+            color: var(--primary-dark);
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            flex: 1;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        /* Cards */
+        .services-grid, .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--gray-border);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            background: #f0f4fa;
+            width: 70px;
+            height: 70px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .why-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 1.8rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: var(--white);
+            border-radius: 28px;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--accent);
+        }
+
+        /* Contact Form */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            background: var(--white);
+            border-radius: 32px;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+
+        .contact-info {
+            background: var(--primary);
+            padding: 2.5rem;
+            flex: 1;
+            color: white;
+        }
+
+        .contact-form {
+            padding: 2.5rem;
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--gray-border);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255,179,71,0.2);
+        }
+
+        footer {
+            background: #0a1a2f;
+            color: #cfdee9;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin-right: 1.2rem;
+            font-size: 1.4rem;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Floating WhatsApp & Call */
+        .float-buttons {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            z-index: 999;
+        }
+
+        .float-btn {
+            background: #25D366;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: all 0.2s;
+            color: white;
+            font-size: 28px;
+            text-decoration: none;
+        }
+
+        .float-btn.call {
+            background: var(--primary);
+        }
+
+        .float-btn:hover {
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 850px) {
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                background: white;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-desc {
+                max-width: 100%;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .container {
+                padding: 0 1.5rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sticky Navbar -->
+<div class="navbar">
+    <div class="nav-container">
+        <div class="logo-area">
+            <!-- SVG Logo: modern monogram + A2Z -->
+            <div class="logo-svg">
+                <svg width="48" height="48" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="60" height="60" rx="16" fill="#002255"/>
+                    <path d="M18 38L24 22L30 38" stroke="#FFB347" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <text x="30" y="44" font-size="18" text-anchor="middle" fill="#FFB347" font-weight="bold" font-family="Arial">A2Z</text>
+                    <circle cx="42" cy="30" r="5" fill="#FFB347"/>
+                </svg>
+            </div>
+            <span class="brand-text">A2Z SERVICES</span>
+        </div>
+        <div class="mobile-toggle" id="mobileToggle">☰</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#whyus">Why Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">⭐ Trusted Partner in Bhopal</div>
+                <h1 class="hero-title">Integrated Facility & Manpower Solutions</h1>
+                <p class="hero-desc">We deliver excellence across housekeeping, security, and business support. <strong>You dream, we design</strong> — tailored services for modern enterprises.</p>
+                <div class="hero-actions">
+                    <a href="tel:+919876543210" class="btn btn-primary">📞 Call Now</a>
+                    <a href="https://wa.me/919876543210?text=Hello%20A2Z%20Services,%20I%20need%20a%20quote" class="btn btn-accent" target="_blank">💬 WhatsApp</a>
+                    <a href="#contact" class="btn btn-outline">Get Quote →</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=800&h=550&fit=crop" alt="Professional facility team" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About A2Z Services</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+                <div style="flex:1.2">
+                    <p style="font-size:1.1rem; margin-bottom:1rem">Established with a vision to revolutionize facility management and workforce solutions in Central India, <strong>A2Z Services</strong> combines trained manpower with smart technology. We ensure operational excellence, 100% compliance, and round-the-clock support.</p>
+                    <p style="margin-bottom:1rem">Headquartered in Bhopal, we serve industries ranging from corporate offices to industrial complexes, providing end-to-end solutions that increase efficiency and reduce overheads.</p>
+                    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                        <div><span style="font-weight:800; font-size:2rem; color:var(--accent)">150+</span><br>Happy Clients</div>
+                        <div><span style="font-weight:800; font-size:2rem; color:var(--accent)">98%</span><br>Retention Rate</div>
+                        <div><span style="font-weight:800; font-size:2rem; color:var(--accent)">24/7</span><br>Support</div>
+                    </div>
+                </div>
+                <div style="flex:0.9">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="About team" style="border-radius: 28px; width:100%; box-shadow: var(--shadow-sm);" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (cards) -->
+    <section id="services" style="background: var(--gray-light);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title" style="display: inline-block;">Our Core Services</h2>
+                <p class="section-subhead">Comprehensive solutions tailored to your business needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card"><div class="service-icon">🧹</div><h3>Housekeeping & Cleaning</h3><p>Daily upkeep, deep cleaning, and sanitization for offices, malls, and residential complexes.</p></div>
+                <div class="service-card"><div class="service-icon">🛡️</div><h3>Security Services</h3><p>Trained guards, CCTV monitoring, access control — 24x7 protection.</p></div>
+                <div class="service-card"><div class="service-icon">👥</div><h3>Manpower Outsourcing</h3><p>Skilled & semi-skilled workforce for IT, manufacturing, logistics and admin roles.</p></div>
+                <div class="service-card"><div class="service-icon">⚙️</div><h3>Facility Management</h3><p>Electrical, HVAC, plumbing, and AMC services to keep your infrastructure seamless.</p></div>
+                <div class="service-card"><div class="service-icon">📊</div><h3>Business Support</h3><p>Reception, front desk, data entry, and back-office support solutions.</p></div>
+                <div class="service-card"><div class="service-icon">🌿</div><h3>Pest Control & Landscaping</h3><p>Eco-friendly pest management and garden maintenance for healthy premises.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="whyus">
+        <div class="container">
+            <div class="text-center"><h2 class="section-title" style="display: inline-block;">Why Choose A2Z?</h2><p class="section-subhead">We combine innovation, reliability and customer-first approach</p></div>
+            <div class="why-grid">
+                <div class="why-card">🏆 <strong>10+ Years Experience</strong><br>Proven track record across industries.</div>
+                <div class="why-card">📋 <strong>100% Compliant</strong><br>Full statutory compliance, insured workforce.</div>
+                <div class="why-card">🤝 <strong>Dedicated Account Manager</strong><br>Single point of contact for all queries.</div>
+                <div class="why-card">📱 <strong>Tech-enabled Reporting</strong><br>Real-time updates & digital attendance.</div>
+                <div class="why-card">⚡ <strong>Quick Deployment</strong><br>Staff ready within 48 hours.</div>
+                <div class="why-card">🌍 <strong>Eco-friendly Practices</strong><br>Green cleaning and sustainable operations.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" style="background: var(--gray-light);">
+        <div class="container">
+            <div class="text-center"><h2 class="section-title">Client Love</h2><p class="section-subhead">What our partners say about A2Z Services</p></div>
+            <div class="testimonial-grid">
+                <div class="testimonial">“A2Z transformed our facility management. Professional staff, on-time service. Highly recommended!”<br>— <strong>Rahul Mehta, MD, Nexus Corp</strong></div>
+                <div class="testimonial">“Their manpower solutions helped us scale operations without hiring overhead. Exceptional response time.”<br>— <strong>Priya Sharma, Operations Head</strong></div>
+                <div class="testimonial">“From security to housekeeping, A2Z delivers consistency. We’ve partnered for 3+ years.”<br>— <strong>Anil Joshi, Plant Manager</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with form -->
+    <section id="contact">
+        <div class="container">
+            <div class="text-center"><h2 class="section-title" style="display: inline-block;">Get in Touch</h2><p class="section-subhead">Request a free consultation or quote — we reply within hours</p></div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 style="font-size: 1.7rem; margin-bottom: 1rem;">📌 Visit Us</h3>
+                    <p><strong>A2Z Services</strong><br>Plot No. 17, Koushalya Nagar,<br>BDA Road, Khajuri Kalan,<br>Bhopal, MP - 462022</p>
+                    <p style="margin-top: 1.5rem;">📞 Phone: <a href="tel:+919876543210" style="color:#FFB347;">+91 98765 43210</a><br>✉️ Email: <a href="mailto:contact@a2zservices.in" style="color:#FFB347;">contact@a2zservices.in</a><br>💬 WhatsApp: <a href="https://wa.me/919876543210" style="color:#FFB347;">+91 98765 43210</a></p>
+                    <div style="margin-top: 2rem;"><strong>Working Hours:</strong><br>Mon-Sat: 9AM – 7PM</div>
+                </div>
+                <div class="contact-form">
+                    <form id="leadForm" action="#" method="post">
+                        <div class="form-group"><input type="text" placeholder="Full Name *" id="name" required></div>
+                        <div class="form-group"><input type="email" placeholder="Email Address *" id="email" required></div>
+                        <div class="form-group"><input type="tel" placeholder="Phone Number" id="phone"></div>
+                        <div class="form-group"><select id="service"><option>Select Service</option><option>Housekeeping</option><option>Security</option><option>Manpower</option><option>Facility Management</option><option>Other</option></select></div>
+                        <div class="form-group"><textarea rows="3" placeholder="Your message / requirement"></textarea></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Enquiry →</button>
+                        <p style="font-size:0.8rem; margin-top:0.8rem;">We'll get back within 24 hours.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-flex">
+        <div><div style="display:flex; align-items:center; gap:8px;"><div class="logo-svg"><svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="60" rx="12" fill="#FFB347"/><text x="30" y="42" font-size="24" text-anchor="middle" fill="#002255" font-weight="bold">A2Z</text></svg></div><span style="font-weight:bold; font-size:1.2rem;">A2Z SERVICES</span></div><p style="margin-top:12px;">Plot No. 17, Koushalya Nagar,<br>Bhopal - 462022</p></div>
+        <div><h4>Quick Links</h4><ul style="list-style:none; margin-top:8px;"><li><a href="#home" style="color:#cfdee9; text-decoration:none;">Home</a></li><li><a href="#services" style="color:#cfdee9; text-decoration:none;">Services</a></li><li><a href="#contact" style="color:#cfdee9; text-decoration:none;">Contact</a></li></ul></div>
+        <div><h4>Connect</h4><div class="social-links"><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="LinkedIn">🔗</a><a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="Twitter">🐦</a></div><p style="margin-top:1rem;">© 2025 A2Z Services<br>All rights reserved.</p></div>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp & Call -->
+<div class="float-buttons">
+    <a href="https://wa.me/919876543210?text=Hi%20A2Z%20Services,%20I%20need%20assistance" class="float-btn" target="_blank">💬</a>
+    <a href="tel:+919876543210" class="float-btn call">📞</a>
+</div>
+
+<script>
+    // Mobile nav toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === "#" || href === "") return;
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (navLinks.classList.contains('active')) navLinks.classList.remove('active');
+            }
+        });
+    });
+
+    // Simple contact form handler (lead gen simulation - just alert and reset)
+    const form = document.getElementById('leadForm');
+    if(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            if(name === "") {
+                alert("Please enter your name.");
+                return;
+            }
+            alert(`Thank you ${name}! Your request has been received. Our team will reach out shortly.`);
+            form.reset();
+        });
+    }
+
+    // small animation on scroll reveal (simple intersection observer for cards)
+    const cards = document.querySelectorAll('.service-card, .why-card, .testimonial');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0px)';
+            }
+        });
+    }, { threshold: 0.1 });
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.4s ease';
+        observer.observe(card);
+    });
+</script>
+
+</body>
+</html>
